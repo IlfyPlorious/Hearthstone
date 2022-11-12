@@ -1,0 +1,135 @@
+.navigation-container {
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    background: var(--colorOnBackground);
+    justify-content: space-between;
+
+    .logo-img-mobile {
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .logo-img-desktop {
+        display: none;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .mobile-title{
+        font-size: 1.2em;
+        align-self: center;
+        text-align: center;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        text-align: end;
+        position: fixed;
+        z-index: 999;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background-color: var(--darkerOnBackground);
+        padding: 2em;
+
+        .close-nav-btn {
+            height: 50px;
+            padding: 0px;
+            align-self: flex-end;
+            margin-bottom: 2em;
+            cursor: pointer;
+        }
+
+        .navigation-list {
+            margin: 0px;
+            list-style-type: none;
+
+            .nav-item {
+                padding-top: 2em;
+
+                a {
+                    text-decoration: none;
+                    color: var(--accentBlue);
+                    font-size: 2em;
+                    padding: 0.2em;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background: var(--colorOnBackground);
+                    }
+                }
+
+                .current {
+                    color: var(--accentBlueDark);
+                }
+            }
+        }
+    }
+
+    .open-nav-btn {
+        height: 50px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navigation-container {
+        padding: 1.5em;
+
+        .logo-img-mobile {
+            display: none;
+        }
+
+        .logo-img-desktop {
+            width: 8em;
+            display: block;
+        }
+
+        .mobile-title{
+            display: none;
+        }
+
+        .open-nav-btn {
+            display: none;
+        }
+
+        .navigation {
+            display: flex;
+            position: unset;
+            height: auto;
+            background: none;
+            align-self: center;
+            padding: 0px;
+
+            .close-nav-btn {
+                display: none;
+            }
+
+            .navigation-list {
+                display: flex;
+                padding: 0px;
+                justify-content: end;
+
+                .nav-item {
+                    padding-top: 0em;
+                    padding-right: 2em;
+
+                    a {
+                        color: var(--accentBlueDark);
+
+                        &:hover {
+                            background: var(--darkerOnBackground);
+                        }
+                    }
+
+                    .current {
+                        color: var(--accentBlue);
+                    }
+                }
+            }
+        }
+    }
+}

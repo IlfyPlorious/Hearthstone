@@ -1,0 +1,20 @@
+:root{
+    --primaryBackground: #fff2cc;
+    --colorOnBackground: #84714F;
+    --darkerOnBackground: #5A3A31;
+    --almostBlack: #31231E;
+    --accentBlue: #477998;
+    --accentBlueDark: #255776;
+}
+
+@font-face {
+    font-family: FrizQuadrata;
+    src: url("/resources/fonts/friz-quadrata-bold_Tr87o/Friz Quadrata Bold/Friz Quadrata Bold.otf");
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: var(--primaryBackground);
+    font-family: 'FrizQuadrata';
+}
